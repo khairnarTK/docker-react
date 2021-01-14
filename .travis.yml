@@ -2,8 +2,8 @@ sudo: required
 services: 
   - docker
 
-before_build:
+before_install:
   - docker build -t tusharkhairnar/docker-react -f Dockerfile.Dev .
 
-scripts:
+script:
   - docker run tusharkhairnar/docker-react npm run test -- --coverage
