@@ -6,4 +6,4 @@ before_build:
   - docker build -t tusharkhairnar/docker-react -f Dockerfile.Dev .
 
 scripts:
-  - docker run tusharkhairnar/docker-react -- --coverage
+  - docker run tusharkhairnar/docker-react npm run test -- --coverage
